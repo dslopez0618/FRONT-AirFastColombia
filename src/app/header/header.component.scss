@@ -1,0 +1,253 @@
+/* Estilos generales del header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  padding-top: 60px;
+}
+
+/* Ajustes para el menú de usuario */
+#user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 17rem;
+  background-color: #1c1f26;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1rem;
+}
+
+.user-menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button i {
+  margin-right: 8px;
+}
+
+.logout-button {
+  background-color: #ff5e5e;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #e04b4b;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.edit-profile-button {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.edit-profile-button:hover {
+  background-color: #388e3c;
+}
+
+/* Botón específico para SuperUsuario */
+.super-usuario-button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.super-usuario-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mostrar el menú al hacer hover o focus en el botón */
+#user-menu-button:focus + #user-menu,
+#user-menu-button:hover + #user-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Evitar que se oculte cuando el menú esté abierto */
+#user-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  background-color: #2b2f3a;
+  color: #d1d5db;
+  border: 1px solid #3b3f49;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5);
+}
+
+.btn-green {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-green:hover {
+  background-color: #218838;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+/* Ajuste del link "Olvidaste tu contraseña" */
+a {
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+/* Estilo para el checkbox y su label */
+.flex.items-center {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#remember {
+  accent-color: #4a90e2;
+}
+
+.menu-button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #1d4ed8; // Set the background to match other buttons
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #2563eb; // Slightly lighter blue on hover
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #3b82f6;
+  }
+}
+
+.admin-button {
+  display: block;
+  width: 100%; // Asegura el mismo ancho que otros botones en el menú
+  padding: 10px 20px;
+  background-color: #1e40af; // Azul similar a los otros botones
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1d4ed8; // Color de hover similar al botón "Crear Vuelo"
+  }
+}
+
+
+/* Estilos de navegación */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f5f9;
+}
+
+/* Estilos específicos para opciones de administración de SuperUsuario */
+.super-usuario-menu {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #343a40;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.super-usuario-menu a {
+  color: #ffc107; /* Color distintivo para el superusuario */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.super-usuario-menu a:hover {
+  color: #fff;
+  background-color: #ffc107;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+  
